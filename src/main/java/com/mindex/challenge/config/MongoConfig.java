@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @EnableMongoRepositories(basePackageClasses = EmployeeRepository.class)
 @Configuration
-public class MongoConfig{
+public class MongoConfig {
     @Bean
     public MongoTemplate mongoTemplate(MongoClient mongoClient) {
         return new MongoTemplate(mongoDbFactory(mongoClient));
